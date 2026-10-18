@@ -1,0 +1,23 @@
+# Compilação do .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Segredos: NUNCA subir para o GitHub
+.dev.vars
+.env
+*.pem
+*.pfx
+senha.dat
+configuracoes.json
+
+# Cloudflare / Node
+node_modules/
+.wrangler/
+
+# Instaladores gerados
+*.exe
+*.msi
+Output/
