@@ -577,4 +577,3 @@ document.getElementById("btnAv").addEventListener("click", carregarAvisos);
 </script>
 </body>
 </html>`;
-
