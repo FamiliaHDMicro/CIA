@@ -1,0 +1,22 @@
+<Window x:Class="NexusAdminTool.JanelaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ControlIA — Central"
+        Width="560" Height="560" MinWidth="340" MinHeight="360"
+        WindowStartupLocation="CenterScreen">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="14">
+            <TextBlock Text="ControlIA — Central" FontSize="22" FontWeight="SemiBold" Margin="0,0,0,6"/>
+            <TextBlock x:Name="txtModo" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            <Button x:Name="btnBancada" Click="btnBancada_Click" Padding="12,8" Margin="0,0,0,14"/>
+
+            <Button Content="Meus sinais vitais" Click="btnRelatorio_Click" Padding="12,8" Margin="0,0,0,6"/>
+            <Button Content="Limpeza do disco" Click="btnLimpeza_Click" Padding="12,8" Margin="0,0,0,6"/>
+            <Button Content="Memória: quem está usando" Click="btnMemoria_Click" Padding="12,8" Margin="0,0,0,6"/>
+            <Button Content="O que abre junto com o Windows" Click="btnInicializacao_Click" Padding="12,8" Margin="0,0,0,6"/>
+            <Button Content="Programas instalados" Click="btnProgramas_Click" Padding="12,8" Margin="0,0,0,6"/>
+            <Button Content="Discos e pen drive (modo bancada)" Click="btnDiscos_Click" Padding="12,8" Margin="0,0,0,6"/>
+            <Button Content="Licença (digitar a chave)" Click="btnLicenca_Click" Padding="12,8" Margin="0,14,0,6"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

@@ -12,7 +12,7 @@ id = "COLE_AQUI_O_ID_DO_KV"
 [[d1_databases]]
 binding = "DB"
 database_name = "controlia"
-database_id = "4f509b72-2405-4c47-9ae2-744cf52cad08"
+database_id = "COLE_AQUI_O_ID_DO_BANCO"
 
 # Para rodar a rotina diária de técnicos expirados, descomente:
 # [triggers]

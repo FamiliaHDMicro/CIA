@@ -1,0 +1,19 @@
+<Window x:Class="NexusAdminTool.ModuloInicializacao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ControlIA — Inicialização"
+        Width="760" Height="560" MinWidth="340" MinHeight="320"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txt" Grid.Row="0" IsReadOnly="True" FontFamily="Consolas" FontSize="13"
+                 TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Padding="8"/>
+        <WrapPanel Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Right">
+            <Button Content="Ler de novo" Click="btnLer_Click" MinWidth="120" Padding="12,6" Margin="6,0,0,0"/>
+            <Button Content="Fechar" Click="btnFechar_Click" MinWidth="100" Padding="12,6" Margin="6,0,0,0"/>
+        </WrapPanel>
+    </Grid>
+</Window>

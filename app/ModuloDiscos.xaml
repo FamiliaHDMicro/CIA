@@ -1,0 +1,28 @@
+<Window x:Class="NexusAdminTool.ModuloDiscos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ControlIA — Discos e pen drive (bancada)"
+        Width="760" Height="560" MinWidth="340" MinHeight="360"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtResumo" Grid.Row="0" TextWrapping="Wrap" Margin="0,0,0,8"
+                   Text="Aqui só se mexe em pen drive (disco removível). O disco do Windows fica sempre bloqueado."/>
+        <ListBox x:Name="lista" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Texto}" TextWrapping="Wrap" Margin="2,3"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <WrapPanel Grid.Row="2" Margin="0,10,0,0" HorizontalAlignment="Right">
+            <Button Content="Atualizar lista" Click="btnAtualizar_Click" MinWidth="130" Padding="12,6" Margin="6,0,0,0"/>
+            <Button Content="Preparar pen drive (APAGA TUDO)" Click="btnPreparar_Click" MinWidth="230" Padding="12,6" Margin="6,0,0,0"/>
+            <Button Content="Fechar" Click="btnFechar_Click" MinWidth="100" Padding="12,6" Margin="6,0,0,0"/>
+        </WrapPanel>
+    </Grid>
+</Window>

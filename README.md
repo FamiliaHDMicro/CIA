@@ -1,18 +1,20 @@
-# Worker da CIA (Cloudflare)
+# CIA — ControlIA
 
-Arquivo único: `worker.js`. Cuida de licenças, avisos das CIAs e do painel do dono (`/admin`).
+A CIA é a assistente que vive dentro do PC: sente as peças, avisa e sugere. Ela só avisa e sugere;
+não apaga, não fecha e não desliga nada sozinha.
 
-## No Cloudflare (Worker `control-ia`)
-- Associações: `LICENCAS_KV` (KV) e `DB` (D1, tabela `uso_telemetria`, veja `schema.sql`).
-- Segredo `ADMIN_TOKEN` = senha do painel. Mínimo de 8 caracteres (constante `SENHA_MINIMA`).
-  Sem espaços e sem acentos. Quanto mais longa, mais segura.
+## Estrutura
+| Pasta | O que tem |
+|---|---|
+| `app/` | Programa para Windows (C# / WPF, .NET 10). Abre como Administrador. |
+| `worker/` | Servidor na Cloudflare: licenças, avisos e painel do dono. |
+| `docs/` | Savepoints, pendências e anotações de projeto. |
 
-## Como publicar uma mudança
-1. Edite `worker.js` aqui no GitHub.
-2. No Cloudflare: Worker `control-ia` > Editar código > cole o arquivo inteiro > Implantar.
-   (O Worker NÃO está ligado ao GitHub: a publicação é manual.)
+## Compilar o app (no PC)
+1. Instale o .NET 10 SDK.
+2. Abra o PowerShell **como Administrador**, entre na pasta `app` e rode `dotnet build`.
+3. Abra `app\bin\Debug\net10.0-windows\ControlIA.exe` (clique em Sim no aviso do Administrador).
 
-## Rotas
-- `POST /api/validar-licenca` (app)
-- `POST /api/telemetria` (app)
-- `GET /admin` (painel) e `/api/admin/*` (exigem a senha)
+## Regras do repositório
+- Nenhuma senha, chave de licença real ou token entra aqui (veja `.gitignore`).
+- O envio de dados ao servidor vem **desligado** e só acontece com confirmação a cada vez.

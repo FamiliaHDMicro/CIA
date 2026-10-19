@@ -9,4 +9,3 @@ CREATE TABLE IF NOT EXISTS uso_telemetria (
   evento TEXT,
   detalhes TEXT
 );
-

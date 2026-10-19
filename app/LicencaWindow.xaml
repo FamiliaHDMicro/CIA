@@ -1,0 +1,44 @@
+<Window x:Class="NexusAdminTool.LicencaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ControlIA — Licença"
+        Width="480" Height="300"
+        MinWidth="360" MinHeight="280"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Ativar licença"
+                   FontSize="20" FontWeight="SemiBold" Margin="0,0,0,6"/>
+
+        <TextBlock Grid.Row="1" x:Name="txtSituacao"
+                   TextWrapping="Wrap" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Chave (formato XXXXX-XXXXX-XXXXX):" Margin="0,0,0,4"/>
+            <TextBox x:Name="txtChave"
+                     MaxLength="17"
+                     CharacterCasing="Upper"
+                     FontFamily="Consolas" FontSize="16"
+                     Padding="6"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="3" x:Name="txtResultado"
+                   TextWrapping="Wrap" Margin="0,12,0,0"/>
+
+        <WrapPanel Grid.Row="4" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button x:Name="btnAtivar" Content="Ativar"
+                    Click="btnAtivar_Click" IsDefault="True"
+                    MinWidth="110" Padding="12,6" Margin="6,0,0,0"/>
+            <Button x:Name="btnFechar" Content="Fechar"
+                    Click="btnFechar_Click" IsCancel="True"
+                    MinWidth="90" Padding="12,6" Margin="6,0,0,0"/>
+        </WrapPanel>
+    </Grid>
+</Window>
